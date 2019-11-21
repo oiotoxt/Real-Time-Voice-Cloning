@@ -35,6 +35,7 @@ You will need the following whether you plan to use the toolbox only or to retra
 **Python 3.7**. Python 3.6 might work too, but I wouldn't go lower because I make extensive use of pathlib.
 
 Run `pip install -r requirements.txt` to install the necessary packages. Additionally you will need [PyTorch](https://pytorch.org/get-started/locally/) (>=1.0.1).
+( pip3 install torch torchvision )
 
 A GPU is mandatory, but you don't necessarily need a high tier GPU if you only want to use the toolbox.
 
@@ -47,6 +48,11 @@ Before you download any dataset, you can begin by testing your configuration wit
 `python demo_cli.py`
 
 If all tests pass, you're good to go.
+
+```bash
+> OSError: PortAudio library not found
+sudo apt-get install libportaudio2
+```
 
 ### Datasets
 For playing with the toolbox alone, I only recommend downloading [`LibriSpeech/train-clean-100`](http://www.openslr.org/resources/12/train-clean-100.tar.gz). Extract the contents as `<datasets_root>/LibriSpeech/train-clean-100` where `<datasets_root>` is a directory of your choosing. Other datasets are supported in the toolbox, see [here](https://github.com/CorentinJ/Real-Time-Voice-Cloning/wiki/Training#datasets). You're free not to download any dataset, but then you will need your own data as audio files or you will have to record it with the toolbox.
